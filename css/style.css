@@ -38,10 +38,16 @@ html {
 
 #search-form input {
     width: 50%;
+    border: none;
+    border-radius: 5px;
     padding: 10px;
-    background-color: white;
 }
 
-.movies {
+.movies .movie-item{
     text-align: left;
+    background-color: #E5EBED;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }

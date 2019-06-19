@@ -5,10 +5,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
     searchForm.addEventListener('submit', (e)=> {
         e.preventDefault();
-        const searchText = document.querySelector('#form-control').value;
-        const apiKey = '08e954c9c496514c2ec00002ea60edfc';
-        const language = 'en-US';
-        const server = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=${language}&page=1&include_adult=false&query=${searchText}`;
+        const searchText = document.querySelector('#form-control').value,
+            apiKey = '08e954c9c496514c2ec00002ea60edfc',
+            language = 'en-US',
+            server = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=${language}&page=1&include_adult=false&query=${searchText}`;
         requestApi('GET', server);
     });
 
@@ -31,7 +31,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
             output.results.forEach((item)=> {
                 let nameItem = item.name || item.title,
                     firstSeries = item.first_air_date || item.release_date;
-                inner += `<p>${nameItem}(First release: ${firstSeries})</p>`;
+                inner += `<div class="movie-item">
+                            <h3>${nameItem}</h3>
+                            <p>Release date: ${firstSeries}</p>
+                         </div>`;
             });
 
             movies.innerHTML = inner;

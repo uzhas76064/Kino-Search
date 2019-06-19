@@ -31,7 +31,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
             output.results.forEach((item)=> {
                 let nameItem = item.name || item.title,
                     firstSeries = item.first_air_date || item.release_date;
-                inner += `<p>${nameItem}(First release: ${firstSeries})</p>`;
+                inner += `<div class="movie-item">
+                            <h3>${nameItem}</h3>
+                            <p>Release date: ${firstSeries}</p>
+                         </div>`;
             });
 
             movies.innerHTML = inner;

@@ -40,20 +40,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 });
 
                 movies.innerHTML = inner;
+
+                let posters = document.querySelectorAll('.poster');
+                for(let i = 0; i < posters.length; i++) {
+                    posters[i].addEventListener('error', () => {
+                        posters[i].setAttribute('src', 'https://dummyimage.com/361x415/cccccc/00000b.png&text=Ooops..+It+seems+image+not+found');
+                        posters[i].style.cssText = 'height: 415px;';
+                    });
+                }
             })
              .catch(err => {
                 movies.textContent += 'Oops.. Something went wrong';
                 console.log(err.status);
             });
     });
-
-    //Почему-то этот код не работает и я не могу понять почему
-    // поэтому стилизовал битое изображение в css
-    //пробовал заносить в then() и catch(), но эффекта нет
-    //Можно объяснить этот момент?
-
-    /* let posterImg = movies.querySelector('.poster');
-        posterImg.addEventListener('error', () => {
-       posterImg.setAttribute('src', 'http://placehold.it/361.png/&text=Ooops..+It+seems+poster+not+found');
-    }); */
 });

@@ -54,18 +54,5 @@ window.addEventListener('DOMContentLoaded', () => {
                 console.log(err.status);
             });
     });
-<<<<<<< HEAD
 });
-=======
 
-    //Почему-то этот код не работает и я не могу понять почему
-    // поэтому стилизовал битое изображение в css
-    //пробовал вставлять этот код в then() и ctach(), но эффекта нет
-    //Можно объяснить этот момент?
-
-    /* let posterImg = movies.querySelector('.poster');
-        posterImg.addEventListener('error', () => {
-       posterImg.setAttribute('src', 'http://placehold.it/361.png/&text=Ooops..+It+seems+poster+not+found');
-    }); */
-});
->>>>>>> ada534d5d47bdbbe7826c66df5621623ab265132

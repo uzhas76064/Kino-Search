@@ -55,7 +55,3 @@ window.addEventListener('DOMContentLoaded', () => {
             });
     });
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> ab37855c5f22a97807dfe5b1306cdb76c03c44f5

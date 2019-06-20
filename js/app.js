@@ -49,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Почему-то этот код не работает и я не могу понять почему
     // поэтому стилизовал битое изображение в css
+    //пробовал вставлять этот код в then() и ctach(), но эффекта нет
     //Можно объяснить этот момент?
 
     /* let posterImg = movies.querySelector('.poster');

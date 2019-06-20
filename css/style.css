@@ -65,3 +65,15 @@ html {
     border-radius: 5px;
 }
 
+.poster {
+    border-radius: 5px;
+}
+
+h4 {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.info-container {
+    display: contents;
+}

@@ -43,11 +43,34 @@ html {
     padding: 10px;
 }
 
-.movies .movie-item{
-    text-align: left;
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movies .movie-item {
+    text-align: center;
     background-color: #E5EBED;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 10px;
+    width: 33.34%;
+    flex-grow: 1;
 }
+
+.movie-item img {
+    width: 50%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.movie-item img::after {
+    content: 'Ooops.. It seems image not found';
+    font-size: 50px;
+    display: block;
+}
+
+/* .movies .movie-item:nth-child(4n+1) {
+    margin-right: 0;
+}
+ */

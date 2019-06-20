@@ -1,8 +1,7 @@
 'use strict';
 window.addEventListener('DOMContentLoaded', () => {
     let searchForm = document.querySelector('#search-form'),
-        movies = document.querySelector('.movies'),
-        posterImg = movies.querySelector('.poster');
+        movies = document.querySelector('.movies');
 
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -30,7 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
                     let nameItem = item.name || item.title,
                         firstSeries = item.first_air_date || item.release_date;
 
-                    item.poster_path !== null
                         inner +=
                         `<div class="movie-item">
                             <img src="${poster + item.poster_path}" class="poster" alt="${nameItem}">
@@ -53,8 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // поэтому стилизовал битое изображение в css
     //Можно объяснить этот момент?
 
-    /* posterImg.addEventListener('error', () => {
-        posterImg.setAttribute('src', 'icon.png');
+    /* let posterImg = movies.querySelector('.poster');
+        posterImg.addEventListener('error', () => {
+       posterImg.setAttribute('src', 'http://placehold.it/361.png/&text=Ooops..+It+seems+poster+not+found');
     }); */
-
 });
